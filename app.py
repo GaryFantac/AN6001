@@ -1,4 +1,5 @@
 #api can not appear in cloud
+
 from flask import Flask
 from flask import render_template,request
 import textblob
@@ -6,6 +7,7 @@ import google.generativeai as genai
 import os
 
 #api = 'AIzaSyCJ0zOavC9rikh3WeLoaiw7nUiFF0rT4AA'
+#can not use api directly
 api  = os.getenv('makersuite')
 genai.configure(api_key=api)
 model = genai.GenerativeModel("gemini-1.5-flash")
